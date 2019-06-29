@@ -16,6 +16,19 @@ namespace Junio28.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public ActionResult Insertar()
+        {
+            var model = new Producto();
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Insertar(Producto model)
+        {
+            ProductoDal.Insertar(model);
+            return View(model);
+        }
+
         public ActionResult Listar()
         {
             // viwBag
@@ -25,5 +38,9 @@ namespace Junio28.Controllers
 
             return View();
         }
+
+
+
+
     }
 }

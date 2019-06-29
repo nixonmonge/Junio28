@@ -12,11 +12,24 @@ namespace Junio28.Dal
         public static List<Producto> Listar()
         {
             var l = new List<Producto>();
-            using (var db=new Model1())
+            using (var db = new Model1())
             {
                 l = db.Producto.ToList();
             }
             return l;
         }
+
+        public static bool Insertar(Producto prod)
+        {
+            using (var db = new Model1())
+            {
+                db.Producto.Add(prod);
+                db.SaveChanges();
+            }
+
+            return true;
+
+        }            
+      
     }
 }

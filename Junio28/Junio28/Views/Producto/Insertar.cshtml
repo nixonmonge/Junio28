@@ -1,0 +1,24 @@
+﻿@model Junio28.EF.Producto
+<!--model en minuscula -->
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Insertar</title>
+</head>
+<body>
+    <div>
+        <form method="post">
+            Nombre:<input type="text" name="Nombre" value="@Model.Nombre"/><br />
+            Precio:<input type="text" name="Precio" value="@Model.Precio"/><br />
+            <input type="submit" value="Insertar" /><br />
+
+        </form>
+    </div>
+</body>
+</html>
