@@ -1,0 +1,35 @@
+﻿@using Junio28.EF;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Listar</title>
+</head>
+<body>
+    <div> 
+        <table>
+                <thead>
+                    <tr>
+                        <th>  Id  </th>
+                        <th>  Nombre  </th>
+                        <th>  Precio  </th>
+                    </tr>       
+                </thead>
+                <tbody>
+                    @foreach (Producto item in (List<Producto>)ViewData["productos"])
+                    {
+                        <tr>
+                            <td>@item.ProductoId</td>
+                            <td>@item.Nombre</td>
+                            <td>@item.Precio</td>
+                        </tr>}
+                </tbody>        
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@using Junio28.Junio21;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Listar</title>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>  Ciudad Id  </th>
+                    <th>  Nombre  </th>
+                    
+                    <th>  Paises  </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Ciudades item in (List<Ciudades>)ViewData["Ciudad"])
+                {
+                <tr>
+                    <td>@item.CiudadId</td>
+                    <td>@item.Nombre</td>
+                    
+                    <td>@item.Paises.Nombre</td>
+                </tr>}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
